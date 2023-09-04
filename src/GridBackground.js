@@ -39,12 +39,12 @@ const GridBackground = () => {
               src="https://www.clker.com/cliparts/9/6/b/5/1194995495534010262view_grid.svg.hi.png"
               alt=""
             />
-            {/* {isGridBackground ? "Grid Background" : "Normal Background"} */}
+            
           </label>
           <label className="label">
             <input type="checkbox" />
             <img className="img" src={img} alt="" />
-            {/* {isGridBackground ? "Grid Background" : "Normal Background"} */}
+           
           </label>
         </div>
       </div>
