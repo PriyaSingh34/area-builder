@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Styles for the grid container */
+.main-container{
+  width: 100%;
+  background-color:rgb(187, 249, 253);
+  height: 860px;
   display: flex;
-  flex-direction: column;
+flex-direction: column;
+
+}
+.header{
+  display: flex;
+  justify-content: space-evenly;
+  align-items:center;
+  /* background-color: yellow; */
+  
+}
+p{
+  font-size: 25px;
+}
+.btn{
+  
+  margin-top:60px;
+  background-color:yellow;
+  width: 90px;
+  height: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  /* margin-left: 10px; */
+}
+.boxes{
+  width: 515px;
+  height: 130px;
+  border-radius: 14px;
+  background-color:white;
+  border: 2px solid black;
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.box1 {
+  background-color: rgb(236, 144, 201);
+  width: 40px;
+  height: 40px;
+  border: 2px solid black;
+}
+
+.box2 {
+  background-color: rgb(236, 144, 201);
+  width: 80px;
+  height: 40px;
+  margin-top: 10px;
+  border: 2px solid black;
+  position: relative; /* Needed for absolute positioning of the dashed border */
+}
+
+.box2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  border-left: 2px dashed black;
+  transform: translateX(-50%);
+}
+
+.box3{
+  background-color: rgb(236, 144, 201);
+  width:40px ;
+height: 80px; 
+margin-top: 10px;
+border: 2px solid black;
+position: relative;
+}
+.box3::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-top: 2px dashed black;
+  transform: translateY(-50%);
+}
+
+.box4 {
+  background-color: rgb(236, 144, 201);
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+  border: 2px solid black;
+  position: relative;
+}
+
+.box4::before,
+.box4::after {
+  content: '';
+  position: absolute;
+  border: 1px dashed black;
+}
+
+.box4::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 0;
+  transform: translateY(-50%);
+}
+
+.box4::after {
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+
+
+
+
+.heading{
+  width: 522px;
+  height: 60px;
+  color: white;
+  background-color: rgb(8, 8, 94);
+  margin-left: 180px;
+  margin-bottom: 6px;
+  margin-top: 40px;
+  padding:7px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.leftbar{
+  /* background-color: rgb(249, 216, 221); */
+  width: 37%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  /* margin-left: 50px; */
+}
+.checkbox{
+  border: 2px solid black;
+  background-color: yellow;
 }
 
-.App-link {
-  color: #61dafb;
+.toggle{
+  width: 130px;
+  height: 130px;
+  background-color: rgb(243, 230, 240);
+  border-radius: 18px;
+}
+.label{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 40px;
+  width: 10px;
+  height: 60px;
+}
+.img{
+  width: 40px;
+  height: 40px;
+margin-left: 10px;
+margin-top: 10px;
+color: black;
+}
+.outergrid{
+/* background-color: blueviolet; */
+width: 536px;
+  margin: 20px;
+  height: 412px;
+  border: 2px solid black;
+  /* margin-left: 420px; */
+}
+.grid-container {
+  display: grid;
+  grid-template-rows: repeat(10, 40px);
+  grid-template-columns: repeat(13, 40px);
+  gap: 1px;
+  
+}
+.main{
+  /* background-color: blueviolet; */
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Styles for individual grid boxes */
+.grid-container > div {
+  width: 40px;
+  height: 40px;
+  background-color:white;
+  border: 2px solid rgb(214, 211, 211);
+ 
+}
+
+/* Styles for the normal container */
+.normal-container{
+  width: 534px;
+  height: 409px;
+  border: 2px solid rgb(156, 153, 153); 
+  /* margin: 10px; */
+  background-color: white;
+  
 }
